@@ -16,22 +16,22 @@ class MainActivity : AppCompatActivity() { //: means extend, AppCompatActivity i
         setContentView(R.layout.activity_main)
         //TODO Continue your work here
         //val = value, var = variable
-        val buttonHelloWorld : Button = findViewById(R.id.buttonHelloWorld);
+        val buttonHelloWorld : Button = findViewById(R.id.buttonHelloWorld)
         buttonHelloWorld.setOnClickListener { showMessage() }
 
-        val buttonReset : Button = findViewById(R.id.buttonReset);
+        val buttonReset : Button = findViewById(R.id.buttonReset)
         buttonReset.setOnClickListener { resetMessage() }
 
     }
 
     private fun resetMessage() {
-        val textViewMessage : TextView = findViewById(R.id.textViewMessage);
-        //textViewMessage.setText(getString(R.id.textViewMessage));
-        textViewMessage.setText("Hello world");
+        val textViewMessage : TextView = findViewById(R.id.textViewMessage)
+        textViewMessage.setText(getString(R.string.hello_world))
+
     }
 
     private fun showMessage() {
-        val textViewMessage : TextView = findViewById(R.id.textViewMessage);
-        textViewMessage.setText("Hello <your name here>");
+        val textViewMessage : TextView = findViewById(R.id.textViewMessage)
+        textViewMessage.setText("Hello <your name here>")
     }
 }
